@@ -1,0 +1,4 @@
+images {
+  image: "/elementos/botao_usar.png"
+}
+extrude_borders: 2

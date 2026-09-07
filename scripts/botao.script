@@ -1,0 +1,13 @@
+function init(self)
+	-- Solicita o foco de entrada para detectar toques
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		print("Botão tocado! Enviando mensagem para a Lâmpada...")
+
+		-- Envia a mensagem 'alternar_luz' para o objeto 'lampada'
+		msg.post("/lampada", "alternar_luz")
+	end
+end
