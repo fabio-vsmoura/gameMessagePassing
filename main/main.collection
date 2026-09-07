@@ -1,2 +1,26 @@
 name: "main"
+instances {
+  id: "botao"
+  prototype: "/elementos/botao.go"
+  position {
+    x: 480.0
+    y: 320.0
+  }
+}
+instances {
+  id: "lampada"
+  prototype: "/elementos/lampada.go"
+  position {
+    x: 487.0
+    y: 181.0
+  }
+}
+instances {
+  id: "placar"
+  prototype: "/elementos/placar.go"
+  position {
+    x: 408.0
+    y: 338.0
+  }
+}
 scale_along_z: 0

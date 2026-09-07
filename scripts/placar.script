@@ -1,0 +1,13 @@
+function init(self)
+	self.total_cliques = 0
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("atualizar_estado") then
+		self.total_cliques = self.total_cliques + 1
+
+		-- 'message.acesa' acessa a tabela enviada pela lâmpada
+		local estado_texto = message.acesa and "Acesa" or "Apagada"
+		print("Placar -> Total de toques:", self.total_cliques, "| Estado atual:", estado_texto)
+	end
+end
