@@ -1,4 +1,7 @@
 images {
   image: "/elementos/botao_usar.png"
 }
+images {
+  image: "/elementos/cristal.png"
+}
 extrude_borders: 2

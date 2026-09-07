@@ -1,0 +1,20 @@
+function init(self)
+	self.ligada = false
+end
+
+function on_message(self, message_id, message, sender)
+	-- Verifica se a mensagem recebida é 'alternar_luz'
+	if message_id == hash("alternar_luz") then
+		self.ligada = not self.ligada
+
+		if self.ligada then
+			print("Lâmpada: Acesa!")
+			-- Exemplo: você pode trocar a animação/sprite do objeto aqui
+		else
+			print("Lâmpada: Apagada!")
+		end
+
+		-- Envia uma mensagem para o Placar informando o novo estado
+		msg.post("/placar", "atualizar_estado", { acesa = self.ligada })
+	end
+end
